@@ -8627,7 +8627,8 @@ var index = (function () {
 
   var fileChanged = function fileChanged(_ref) {
     var url = _ref.url,
-        entries = _ref.entries;
+        _ref$entries = _ref.entries,
+        entries = _ref$entries === undefined ? [] : _ref$entries;
 
     d('reloading', url);
     System.reload(SystemJS.baseURL + url, { entries: [].concat(toConsumableArray(entries), toConsumableArray(options.entries)) });
